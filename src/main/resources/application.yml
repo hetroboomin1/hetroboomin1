@@ -13,3 +13,15 @@ database:
   username: hetroboomin
   password: F1JckC0V1D$
   driver: org.postgresql.Driver
+
+---
+spring:
+  config:
+    activate:
+      on-profile: server
+
+database:
+  databaseUrl: jdbc:postgresql://192.168.1.22:16666/mrktdata
+  username: publicapi
+  password: jenny
+  driver: org.postgresql.Driver
