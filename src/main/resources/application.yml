@@ -1,0 +1,15 @@
+SPRING:
+  PROFILES:
+    ACTIVE:
+      dev
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+
+database:
+  databaseUrl: jdbc:postgresql://localhost:5432/MrktData
+  username: hetroboomin
+  password: F1JckC0V1D$
+  driver: org.postgresql.Driver
