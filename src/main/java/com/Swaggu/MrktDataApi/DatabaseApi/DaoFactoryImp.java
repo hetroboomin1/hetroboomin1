@@ -28,7 +28,7 @@ public class DaoFactoryImp implements DaoFactory {
     @Override
     public MrktDao getMrktDao(String ticker) {
         if(listDaos.get(ticker) == null){
-            logger.info("404 ticker not found");
+            logger.info("ticker not found");
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "ticker does not exist");
         }
         return listDaos.get(ticker);

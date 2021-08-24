@@ -5,7 +5,7 @@ import com.Swaggu.MrktDataApi.Models.Spread;
 
 public interface MrktDao {
     public Spread getLatestSpread();
-    public OHLC getOHLC();
+    public OHLC getLatestOHLC();
     //public Ticker getTicker();
     //public Trades getTrades();
     //public 

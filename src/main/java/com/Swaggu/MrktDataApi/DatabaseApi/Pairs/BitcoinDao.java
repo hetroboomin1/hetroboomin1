@@ -66,7 +66,7 @@ public class BitcoinDao implements MrktDao{
     }
 
     // @Override
-    public OHLC getOHLC() { // returns latest spread for bitcoin in JSON
+    public OHLC getLatestOHLC() { // returns latest spread for bitcoin in JSON
         logger.info("Getting OHLC from database");
         List<BigDecimal> valuesList = new ArrayList<BigDecimal>();
         try {

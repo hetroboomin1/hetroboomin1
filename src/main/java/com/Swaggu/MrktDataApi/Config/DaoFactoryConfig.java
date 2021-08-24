@@ -7,7 +7,6 @@ import com.Swaggu.MrktDataApi.DatabaseApi.MrktDao;
 import com.Swaggu.MrktDataApi.DatabaseApi.Pairs.BitcoinDao;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
 
@@ -24,9 +23,5 @@ public class DaoFactoryConfig {
         MrktDaos.put("ETH/CAD", new BitcoinDao(databaseConfig));
         return MrktDaos;
     }
-
-    // @Bean
-    // public DaoFactory getFactory(){
-    //     return new DaoFactoryImp(getDaos());
-    // }
 }
+
