@@ -17,7 +17,8 @@ import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-public class EthereumDao implements MrktDao{
+
+public class RippleDao implements MrktDao{
 
     private final Logger logger = LoggerFactory.getLogger(BitcoinDao.class);
 
@@ -29,7 +30,7 @@ public class EthereumDao implements MrktDao{
     private String password;
     private String driver;
 
-    public EthereumDao(DatabaseConfig databaseConfig){
+    public RippleDao(DatabaseConfig databaseConfig){
         this.databaseUrl = databaseConfig.getDatabaseUrl();
         this.driver = databaseConfig.getDriver();
         this.username = databaseConfig.getUsername();

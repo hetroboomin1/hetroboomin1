@@ -1,7 +1,6 @@
 package com.Swaggu.MrktDataApi.Models;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.math.BigDecimal;
 import java.util.List;
@@ -13,8 +12,6 @@ import java.util.List;
 public class Spread {
 
     // private Logger logger = LoggerFactory.getLogger(Spread.class);
-
-    private List<BigDecimal> data;
 
     private BigDecimal ask;
     private BigDecimal timestamp;
@@ -32,16 +29,8 @@ public class Spread {
         this.timestamp = data.get(2);
         this.bidVol = data.get(3);
         this.askVol = data.get(4);
-        this.data = data;
     }
 
-    public void setData(List<BigDecimal> data){
-        this.data = data;
-    }
-
-    // public List<BigDecimal> getData(){
-    //     return data;
-    // }
 
     public BigDecimal getBid(){
         return bid;
