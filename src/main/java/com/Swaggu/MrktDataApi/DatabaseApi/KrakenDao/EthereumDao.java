@@ -1,4 +1,4 @@
-package com.Swaggu.MrktDataApi.DatabaseApi.Pairs;
+package com.Swaggu.MrktDataApi.DatabaseApi.KrakenDao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

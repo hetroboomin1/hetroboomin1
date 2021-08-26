@@ -1,4 +1,4 @@
-package com.Swaggu.MrktDataApi.DatabaseApi.Pairs;
+package com.Swaggu.MrktDataApi.DatabaseApi.KrakenDao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -18,8 +18,7 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class RippleDao implements MrktDao{
-
+public class BitcoinDao implements MrktDao {
     private final Logger logger = LoggerFactory.getLogger(BitcoinDao.class);
 
     private PreparedStatement stmt = null;
@@ -30,7 +29,7 @@ public class RippleDao implements MrktDao{
     private String password;
     private String driver;
 
-    public RippleDao(DatabaseConfig databaseConfig){
+    public BitcoinDao(DatabaseConfig databaseConfig) {
         this.databaseUrl = databaseConfig.getDatabaseUrl();
         this.driver = databaseConfig.getDriver();
         this.username = databaseConfig.getUsername();
