@@ -1,5 +1,4 @@
-package com.Swaggu.MrktDataApi.DatabaseApi.Pairs;
-
+package com.Swaggu.MrktDataApi.DatabaseApi.KrakenDao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -19,7 +18,8 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class BitcoinDao implements MrktDao{
+public class RippleDao implements MrktDao{
+
     private final Logger logger = LoggerFactory.getLogger(BitcoinDao.class);
 
     private PreparedStatement stmt = null;
@@ -30,7 +30,7 @@ public class BitcoinDao implements MrktDao{
     private String password;
     private String driver;
 
-    public BitcoinDao(DatabaseConfig databaseConfig){
+    public RippleDao(DatabaseConfig databaseConfig){
         this.databaseUrl = databaseConfig.getDatabaseUrl();
         this.driver = databaseConfig.getDriver();
         this.username = databaseConfig.getUsername();
@@ -51,7 +51,7 @@ public class BitcoinDao implements MrktDao{
         List<BigDecimal> spreadValuesList = new ArrayList<BigDecimal>();
         try {
             c = getConnection();
-            String sql = "select jsonb_array_elements_text(data::jsonb -> 'data')::decimal from spread WHERE (data::jsonb ->> 'pair' = 'XBT/CAD') order by time desc limit 5;";
+            String sql = "select jsonb_array_elements_text(data::jsonb -> 'data')::decimal from xrpSpread order by time desc limit 5;";
             stmt = c.prepareStatement(sql);
             ResultSet rs = stmt.executeQuery();
             c.commit();
@@ -71,7 +71,7 @@ public class BitcoinDao implements MrktDao{
         List<BigDecimal> valuesList = new ArrayList<BigDecimal>();
         try {
             c = getConnection();
-            String sql = "select jsonb_array_elements_text(data::jsonb -> 'data')::decimal from ohlc WHERE (data::jsonb ->> 'pair' = 'XBT/CAD') order by time desc limit 9;";
+            String sql = "select jsonb_array_elements_text(data::jsonb -> 'data')::decimal from xrpOHLC order by time desc limit 9;";
             stmt = c.prepareStatement(sql);
             ResultSet rs = stmt.executeQuery();
             c.commit();

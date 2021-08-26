@@ -1,4 +1,4 @@
-package com.Swaggu.MrktDataApi.Exceptions;
+package com.Swaggu.MrktDataApi.Models.Exceptions;
 
 import org.springframework.stereotype.Component;
 
@@ -6,6 +6,6 @@ import org.springframework.stereotype.Component;
 public class InvalidTicker extends Exception{
 
    public InvalidTicker(){
-        super("data does not exist yet");
+        super("data does not exist yet, from advice");
     }
 }

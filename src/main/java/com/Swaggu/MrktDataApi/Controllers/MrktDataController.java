@@ -22,6 +22,7 @@ public class MrktDataController {
 
     @Autowired
     private DaoFactory daoFactory;
+    
     private MrktDao mrktDao;
 
     @GetMapping("/spread")

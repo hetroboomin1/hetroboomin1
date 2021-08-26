@@ -1,4 +1,4 @@
-package com.Swaggu.MrktDataApi.Exceptions;
+package com.Swaggu.MrktDataApi.Models.Exceptions;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ControllerAdvice;
