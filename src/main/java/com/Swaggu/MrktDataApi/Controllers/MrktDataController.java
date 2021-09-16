@@ -1,13 +1,10 @@
 package com.Swaggu.MrktDataApi.Controllers;
 
-import com.Swaggu.MrktDataApi.Models.OHLC;
-import com.Swaggu.MrktDataApi.Models.Spread;
-import com.Swaggu.MrktDataApi.DatabaseApi.DaoFactory;
-import com.Swaggu.MrktDataApi.DatabaseApi.MrktDao;
-// import com.fasterxml.jackson.databind.ObjectMapper;
+import com.Swaggu.MrktDataApi.Models.KrakenModels;
+import com.Swaggu.MrktDataApi.Service.MrktDataService;
 
-// import org.slf4j.Logger;
-// import org.slf4j.LoggerFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,23 +14,33 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/market")
 public class MrktDataController {
-    // private Logger logger = LoggerFactory.getLogger(MrktDataController.class);
-    // private final ObjectMapper mapper = new ObjectMapper();
+    private Logger logger = LoggerFactory.getLogger(MrktDataController.class);
 
     @Autowired
-    private DaoFactory daoFactory;
-    
-    private MrktDao mrktDao;
+    private MrktDataService service;
 
     @GetMapping("/spread")
-    public Spread getSpread(@RequestParam(value = "pair") String ticker) {
-        mrktDao = daoFactory.getMrktDao(ticker);
-        return mrktDao.getLatestSpread();
+    public KrakenModels getSpread(@RequestParam(value = "pair") String pair) { // Automatically converts to json
+        logger.info("Spread request");
+        return getData(pair, "spread");
     }
 
     @GetMapping("/ohlc")
-    public OHLC getOHLC(@RequestParam(value = "pair") String ticker) {
-        mrktDao = daoFactory.getMrktDao(ticker);
-        return mrktDao.getLatestOHLC();
+    public KrakenModels getOHLC(@RequestParam(value = "pair") String pair) {
+        logger.info("OHLC request");
+        return getData(pair, "ohlc-1");
     }
+
+    @GetMapping("/ticker")
+    public KrakenModels getTicker(@RequestParam(value = "pair") String pair) {
+        // mrktDao = daoFactory.getMrktDao(pair);
+        logger.info("Ticker request");
+        return getData(pair, "ticker");
+    }
+
+    private KrakenModels getData(String pair, String channelname) {
+        KrakenModels model = service.getData(pair, channelname);
+        return model;
+    }
+
 }
