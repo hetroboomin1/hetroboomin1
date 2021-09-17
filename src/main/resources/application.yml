@@ -9,7 +9,7 @@ spring:
       on-profile: dev
 
 database:
-  databaseUrl: jdbc:postgresql://localhost:5432/MrktData
+  url: jdbc:postgresql://localhost:5432/MrktData
   username: hetroboomin
   password: F1JckC0V1D$
   driver: org.postgresql.Driver
@@ -21,7 +21,7 @@ spring:
       on-profile: server
 
 database:
-  databaseUrl: jdbc:postgresql://192.168.1.22:16666/mrktdata
+  url: jdbc:postgresql://192.168.1.15:16666/mrktdata
   username: publicapi
   password: jenny
   driver: org.postgresql.Driver

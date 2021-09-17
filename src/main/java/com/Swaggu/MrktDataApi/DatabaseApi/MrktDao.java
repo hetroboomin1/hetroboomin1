@@ -1,12 +1,12 @@
 package com.Swaggu.MrktDataApi.DatabaseApi;
 
-import com.Swaggu.MrktDataApi.Models.OHLC;
-import com.Swaggu.MrktDataApi.Models.Spread;
+import com.fasterxml.jackson.databind.JsonNode;
 
 public interface MrktDao {
-    public Spread getLatestSpread();
-    public OHLC getLatestOHLC();
+    public JsonNode retrieveData(String pair, String channelname);
+    // public Spread getLatestSpread(String pair, String channelname);
+    // public OHLC getLatestOHLC(String pair, String channelname);
     //public Ticker getTicker();
     //public Trades getTrades();
-    //public 
+    //public void setChannel();
 }
