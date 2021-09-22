@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import reactor.core.publisher.Mono;
+
 @RestController
 @RequestMapping("/market")
 public class MrktDataController {
@@ -20,27 +22,26 @@ public class MrktDataController {
     private MrktDataService service;
 
     @GetMapping("/spread")
-    public KrakenModels getSpread(@RequestParam(value = "pair") String pair) { // Automatically converts to json
+    public Mono<KrakenModels> getSpread(@RequestParam(value = "pair") String pair) { // Automatically converts to json
         logger.info("Spread request");
         return getData(pair, "spread");
     }
 
     @GetMapping("/ohlc")
-    public KrakenModels getOHLC(@RequestParam(value = "pair") String pair) {
+    public Mono<KrakenModels> getOHLC(@RequestParam(value = "pair") String pair) {
         logger.info("OHLC request");
         return getData(pair, "ohlc-1");
     }
 
     @GetMapping("/ticker")
-    public KrakenModels getTicker(@RequestParam(value = "pair") String pair) {
+    public Mono<KrakenModels> getTicker(@RequestParam(value = "pair") String pair) {
         // mrktDao = daoFactory.getMrktDao(pair);
         logger.info("Ticker request");
         return getData(pair, "ticker");
     }
 
-    private KrakenModels getData(String pair, String channelname) {
-        KrakenModels model = service.getData(pair, channelname);
+    private Mono<KrakenModels> getData(String pair, String channelname) {
+        Mono<KrakenModels> model = Mono.just(service.getData(pair, channelname));
         return model;
     }
-
 }

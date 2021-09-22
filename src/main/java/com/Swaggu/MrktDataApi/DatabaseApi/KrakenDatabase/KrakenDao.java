@@ -64,7 +64,7 @@ public class KrakenDao implements MrktDao {
         String data = null;
         try {
             c = getConnection();
-            String sql = "SELECT kraken_getSpread(?,?);";
+            String sql = "SELECT getKrakenData(?,?);";
             PreparedStatement cstmt = c.prepareStatement(sql);
             cstmt.setString(1, pair);
             cstmt.setString(2, channelname);

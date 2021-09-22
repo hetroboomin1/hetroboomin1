@@ -43,7 +43,8 @@ private ModelFactory factory;
             return null;
         }
         JsonNode retrievedData = database.retrieveData(pair, channel);
-        dataModel.setData(retrievedData);
+        logger.info(retrievedData.toString());
+        dataModel.setData(retrievedData); //if data is null then DO NOT SET? so my logic is off
         return dataModel;
     }
 }
