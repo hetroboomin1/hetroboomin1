@@ -29,10 +29,10 @@ public class Spread implements KrakenModels {
 
     public void setData(JsonNode data) {
         this.bid = new BigDecimal(data.get(0).asText());
-        this.ask = new BigDecimal(data.get(0).asText());
-        this.timestamp = new BigDecimal(data.get(0).asText());
-        this.bidVol = new BigDecimal(data.get(0).asText());
-        this.askVol = new BigDecimal(data.get(0).asText());
+        this.ask = new BigDecimal(data.get(1).asText());
+        this.timestamp = new BigDecimal(data.get(2).asText());
+        this.bidVol = new BigDecimal(data.get(3).asText());
+        this.askVol = new BigDecimal(data.get(4).asText());
     }
 
     public BigDecimal getBid() {

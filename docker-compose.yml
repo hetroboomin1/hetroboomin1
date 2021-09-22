@@ -2,6 +2,7 @@ version: '3.8'
 services:
     mrktdataapi:
       image: mrktdataapi:latest
+      # build: . UNSUPPORTED??
       ports: 
         - "8080:8080"
       environment:
