@@ -32,6 +32,7 @@ private ModelFactory factory;
         return null;
     }
 
+    //Maybe say fuck the data model?
     @Override
     public KrakenModels getData(String pair, String channel) {
         KrakenModels dataModel;

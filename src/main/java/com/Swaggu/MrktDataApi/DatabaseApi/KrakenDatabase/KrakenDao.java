@@ -41,24 +41,6 @@ public class KrakenDao implements MrktDao {
         return c;
     }
 
-    // public void saveToDb(String payload){
-    // logger.info("Executing postgres function "+payload+channelname+pair);
-    // try {
-    // c = getConnection();
-    // String sql = "CALL insert_data(?,?,?);";
-    // CallableStatement cstmt = c.prepareCall(sql);
-    // cstmt.setString(1, pair);
-    // cstmt.setString(2, channelname);
-    // cstmt.setString(3, payload);
-    // cstmt.execute();
-    // cstmt.close();
-    // c.commit();
-    // c.close();
-    // } catch (Exception e) {
-    // System.err.println(e.getClass().getName() + ": " + e.getMessage());
-    // }
-    // }
-
     @Override
     public JsonNode retrieveData(String pair, String channelname) {
         String data = null;
