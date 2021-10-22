@@ -1,0 +1,16 @@
+com\Swaggu\MrktDataApi\Models\KrakenResponses\Spread.class
+com\Swaggu\MrktDataApi\Models\KrakenResponses\OHLC.class
+com\Swaggu\MrktDataApi\Service\MrktDataService.class
+com\Swaggu\MrktDataApi\DatabaseApi\KrakenDatabase\Factory\DaoFactory.class
+com\Swaggu\MrktDataApi\DatabaseApi\MrktDao.class
+com\Swaggu\MrktDataApi\DatabaseApi\KrakenDatabase\KrakenDao.class
+com\Swaggu\MrktDataApi\Models\KrakenResponses\Ticker.class
+com\Swaggu\MrktDataApi\Models\ModelFactory.class
+com\Swaggu\MrktDataApi\Models\Exceptions\InvalidTicker.class
+com\Swaggu\MrktDataApi\Models\Exceptions\InvalidTickerAdvice.class
+com\Swaggu\MrktDataApi\Config\DaoConfigBuilder.class
+com\Swaggu\MrktDataApi\Models\KrakenModels.class
+com\Swaggu\MrktDataApi\Config\DaoFactoryConfig.class
+com\Swaggu\MrktDataApi\MrktDataApiApplication.class
+com\Swaggu\MrktDataApi\Controllers\MrktDataController.class
+com\Swaggu\MrktDataApi\Service\KrakenDataService.class

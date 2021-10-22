@@ -1,0 +1,17 @@
+C:\Users\Hetti\Desktop\Desktop\Coding\Java\Projects\MrktDataApi\src\main\java\com\Swaggu\MrktDataApi\DatabaseApi\MrktDao.java
+C:\Users\Hetti\Desktop\Desktop\Coding\Java\Projects\MrktDataApi\src\main\java\com\Swaggu\MrktDataApi\Config\DaoFactoryConfig.java
+C:\Users\Hetti\Desktop\Desktop\Coding\Java\Projects\MrktDataApi\src\main\java\com\Swaggu\MrktDataApi\Models\Exceptions\InvalidTicker.java
+C:\Users\Hetti\Desktop\Desktop\Coding\Java\Projects\MrktDataApi\src\main\java\com\Swaggu\MrktDataApi\MrktDataApiApplication.java
+C:\Users\Hetti\Desktop\Desktop\Coding\Java\Projects\MrktDataApi\src\main\java\com\Swaggu\MrktDataApi\DatabaseApi\KrakenDatabase\Factory\DaoFactoryImp.java
+C:\Users\Hetti\Desktop\Desktop\Coding\Java\Projects\MrktDataApi\src\main\java\com\Swaggu\MrktDataApi\Service\KrakenDataService.java
+C:\Users\Hetti\Desktop\Desktop\Coding\Java\Projects\MrktDataApi\src\main\java\com\Swaggu\MrktDataApi\Service\MrktDataService.java
+C:\Users\Hetti\Desktop\Desktop\Coding\Java\Projects\MrktDataApi\src\main\java\com\Swaggu\MrktDataApi\DatabaseApi\KrakenDatabase\Factory\DaoFactory.java
+C:\Users\Hetti\Desktop\Desktop\Coding\Java\Projects\MrktDataApi\src\main\java\com\Swaggu\MrktDataApi\Config\DaoConfigBuilder.java
+C:\Users\Hetti\Desktop\Desktop\Coding\Java\Projects\MrktDataApi\src\main\java\com\Swaggu\MrktDataApi\Models\KrakenModels.java
+C:\Users\Hetti\Desktop\Desktop\Coding\Java\Projects\MrktDataApi\src\main\java\com\Swaggu\MrktDataApi\Models\KrakenResponses\OHLC.java
+C:\Users\Hetti\Desktop\Desktop\Coding\Java\Projects\MrktDataApi\src\main\java\com\Swaggu\MrktDataApi\Controllers\MrktDataController.java
+C:\Users\Hetti\Desktop\Desktop\Coding\Java\Projects\MrktDataApi\src\main\java\com\Swaggu\MrktDataApi\Models\KrakenResponses\Ticker.java
+C:\Users\Hetti\Desktop\Desktop\Coding\Java\Projects\MrktDataApi\src\main\java\com\Swaggu\MrktDataApi\Models\KrakenResponses\Spread.java
+C:\Users\Hetti\Desktop\Desktop\Coding\Java\Projects\MrktDataApi\src\main\java\com\Swaggu\MrktDataApi\DatabaseApi\KrakenDatabase\KrakenDao.java
+C:\Users\Hetti\Desktop\Desktop\Coding\Java\Projects\MrktDataApi\src\main\java\com\Swaggu\MrktDataApi\Models\Exceptions\InvalidTickerAdvice.java
+C:\Users\Hetti\Desktop\Desktop\Coding\Java\Projects\MrktDataApi\src\main\java\com\Swaggu\MrktDataApi\Models\ModelFactory.java
