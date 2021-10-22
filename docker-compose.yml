@@ -2,8 +2,8 @@ version: '3.8'
 services:
     mrktdataapi:
       image: mrktdataapi:latest
-      # build: . UNSUPPORTED??
       ports: 
         - "8080:8080"
       environment:
         - SPRING_PROFILES_ACTIVE=server
+        - database_url=jdbc:postgresql://192.168.1.21:16666/mrktdata

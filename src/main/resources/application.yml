@@ -21,7 +21,7 @@ spring:
       on-profile: server
 
 database:
-  url: jdbc:postgresql://192.168.1.15:16666/mrktdata
+  url: jdbc:postgresql://192.168.1.21:16666/mrktdata
   username: publicapi
   password: jenny
   driver: org.postgresql.Driver
